@@ -112,10 +112,10 @@ body {
     width: 300px;
     height: 315px;
     background-color: #161616;
-    padding: 12px 0;
+    padding: 10px 18px;
     border-radius: 10px;
     margin-left: 51px;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .sidebar-items {
@@ -126,10 +126,10 @@ body {
 }
 
 .sidebar a {
+    font-size: 25px;
+    font-weight: 700;
     text-decoration: none;
     color: #161616;
-
-
 }
 
 .sidebar-link {
@@ -142,7 +142,7 @@ body {
 }
 
 #blog-link {
-    background-color: #DD0000;
+    background-color: darkgreen;
 }
 
 #blog-link a {
@@ -156,13 +156,12 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin-right: 23px
+    margin-right: 18px
 }
 
 .blog {
     width: 298px;
     height: 362px;
-    height: auto;
     border: 1px solid gray;
     border-radius: 10px;
 }
@@ -176,7 +175,16 @@ body {
 }
 
 .transfer-live-btn {
+    font-size: 18px;
+    font-weight: 600;
+    color: #161616;
     margin-top: 10px;
+}
+
+.live-details {
+    font-size: 18px;
+    color: #161616;
+
 }
 
 .rating {
@@ -199,12 +207,23 @@ body {
     padding-left: 8px;
 }
 
+.view-button {
+    width: 168px;
+    height: 47px;
+    color: #FFFFFF;
+    background-color: #DD0000;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5em;
+    margin-left: 23em;
+}
+
 /* Transfar live ends from here  */
 
 /* footer starts here */
 .footer-part {
     width: 100%;
-    height: 250px;
+    height: 385px;
     background-color: #161616;
 
 }
@@ -234,7 +253,27 @@ hr {
 
 }
 
-/* media queries 
+/* social media link included  */
+
+.social-icon {
+    text-align: center;
+    margin: 45px 0px;
+}
+
+.social-icon a {
+    margin: 0 5px;
+}
+
+.fa-brands {
+    font-size: 3em;
+    color: #FFFFFF;
+}
+
+/* footer tag ends here */
+
+
+
+/* media queries  */
 
 
 
@@ -245,7 +284,6 @@ hr {
         width: 316px;
 
     }
-
 
     .banner-left {
         width: 258px;
@@ -293,18 +331,11 @@ hr {
         margin-right: 6em;
         margin-top: -7em;
         align-items: center;
-        
+
     }
 
     .sidebar-link {
-        /* width: 125px;
-        height: 55px;
-        border: 1px solid gray;
-        margin-right: 1em; */
-
-
-
-/* width: 252px;
+        width: 252px;
         height: 55px;
         text-align: center;
         background-color: #FFFFFF;
@@ -316,7 +347,8 @@ hr {
     .group-link {
         width: 231px;
     }
-    #blog-link{
+
+    #blog-link {
         width: 218px;
     }
 
@@ -324,6 +356,10 @@ hr {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
         margin-left: 2em;
+    }
+
+    .view-button {
+        display: none;
     }
 
     .footer-part {
@@ -342,11 +378,17 @@ hr {
     }
 
     .footer-link a:hover {
-        text-decoration: underline; 
-    }}
-*/
+        text-decoration: underline;
+    }
 
-@media screen and (min-width: 689px) and (max-width: 991px) {
+    .social-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 689px) and (max-width: 991px) {
     .banner {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -418,6 +460,39 @@ hr {
     }
 
     #hidden-blog {
+        display: none;
+    }
+
+    .view-button {
+        visibility: visible;
+    }
+
+    .footer-part {
+        height: auto;
+    }
+
+    .footer-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .footer-link a {
+        padding: 1em;
+    }
+
+    .footer-link a:hover {
+        text-decoration: underline;
+    }
+
+    .social-media {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1311px) {
+    .view-button {
         display: none;
     }
 }
